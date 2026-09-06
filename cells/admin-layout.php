@@ -97,7 +97,7 @@
             data-bs-target="#topNavMenu"
             aria-controls="topNavMenu"
             aria-expanded="false"
-            aria-label="Toggle navigation"
+            aria-label="<?= lang('Admin.Toggle navigation');?>"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -163,7 +163,7 @@
                         <?php if($avatarUrl):?>
                             <img src="<?= $avatarUrl;?>" 
                                 class="user-image rounded-circle shadow me-2" 
-                                style="float: left; width: 2rem; height: 2rem; margin-top: -2px;"
+                                style="object-fit: cover; float: left; width: 2rem; height: 2rem; margin-top: -2px;"
                                 alt="">
                         <?php else:?>
                             <i class="bi bi-person-circle me-1" aria-hidden="true"></i>
