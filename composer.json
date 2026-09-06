@@ -1,0 +1,9 @@
+{
+    "name": "basic-app/adminlte4",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "BasicApp\\Core\\" : "src/"
+        }
+    }
+}
