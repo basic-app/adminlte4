@@ -4,6 +4,8 @@
  * @license MIT
  */
 $attributes['class'] = $attributes['class'] ?? 'btn btn-sm btn-' . $type .' text-nowrap';
+
+helper(['admin_icon']);
 ?>
 <?php if($method == 'POST'):?>
     <?php
@@ -16,7 +18,7 @@ $attributes['class'] = $attributes['class'] ?? 'btn btn-sm btn-' . $type .' text
         data-confirmation="<?= esc($confirmation);?>">
         <button <?= stringify_attributes($attributes);?>>
             <?php if($icon):?>
-                <?= view_cell('AdminIcon', $icon);?>
+                <?= admin_icon($icon);?>
             <?php endif;?>
             <?= $label;?>
         </button>
@@ -24,7 +26,7 @@ $attributes['class'] = $attributes['class'] ?? 'btn btn-sm btn-' . $type .' text
 <?php else:?>
     <a href="<?= $url;?>" <?= stringify_attributes($attributes);?>>
         <?php if($icon):?>
-            <?= view_cell('AdminIcon', $icon);?>
+            <?= admin_icon($icon);?>
         <?php endif;?>
         <?= $label;?>
     </a>

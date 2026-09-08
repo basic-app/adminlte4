@@ -3,6 +3,8 @@
  * @author Basic App Dev Team
  * @license MIT
  */
+
+helper(['admin_icon']);
 ?><!doctype html>
 <html lang="<?= esc($lang ?? 'en'); ?>">
   <!--begin::Head-->
@@ -140,7 +142,7 @@
                                         : '';?>" 
                                         href="<?= $item['url'];?>">
                                         <?php if(!empty($item['icon'])):?>
-                                            <?= view_cell('AdminIcon', $item['icon']);?>
+                                            <?= admin_icon($item['icon']);?>
                                         <?php endif;?>
                                         <?= $item['label'];?></a>
                                 </li>
@@ -178,7 +180,7 @@
                                     : '';?>" 
                                     href="<?= $item['url'];?>">
                                         <?php if(!empty($item['icon'])):?>
-                                            <?= view_cell('AdminIcon', $item['icon']);?>
+                                            <?= admin_icon($item['icon']);?>
                                         <?php endif;?>
                                         <?= $item['label'];?>
                                     </a>

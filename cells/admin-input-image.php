@@ -3,7 +3,7 @@
  * @author Basic App Dev Team
  * @license MIT
  */
-helper(['admin_lightbox', 'admin_jquery', 'scripts']);
+helper(['admin_lightbox', 'admin_jquery', 'scripts', 'admin_icon']);
 
 register_admin_lightbox();
 register_admin_jquery();
@@ -42,7 +42,7 @@ unset($attributes['value']);
             <button 
                 type="button" 
                 onclick="clear_admin_input_image(this)" 
-                class="input-group-text"><?= view_cell('AdminIcon', [
+                class="input-group-text"><?= admin_icon([
                     'icon' => 'fa-trash'
                 ]);?></button>
         <?php endif;?>
