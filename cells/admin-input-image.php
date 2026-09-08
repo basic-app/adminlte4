@@ -42,9 +42,7 @@ unset($attributes['value']);
             <button 
                 type="button" 
                 onclick="clear_admin_input_image(this)" 
-                class="input-group-text"><?= admin_icon([
-                    'icon' => 'fa-trash'
-                ]);?></button>
+                class="input-group-text"><?= admin_icon('fa-trash');?></button>
         <?php endif;?>
     </div>
     <div class="invalid-feedback"><?= $error;?></div>
