@@ -7,7 +7,6 @@
         }
     },
     "require": {
-        "almasaeed2010/adminlte": "^4.8",
-        "basic-app/fontawesome7": "dev-main"
+        "almasaeed2010/adminlte": "^4.8"
     }
 }
