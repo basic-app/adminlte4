@@ -3,10 +3,10 @@
  * @author Basic App Dev Team
  * @license MIT
  */
-helper(['admin_lightbox', 'jquery3', 'scripts']);
+helper(['admin_lightbox', 'admin_jquery', 'scripts']);
 
 register_admin_lightbox();
-register_jquery3();
+register_admin_jquery();
 
 $attributes['type'] = 'file';
 $attributes['class'] = $attributes['class'] ?? 'form-control';
