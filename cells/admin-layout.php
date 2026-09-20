@@ -3,7 +3,6 @@
  * @author Basic App Dev Team
  * @license MIT
  */
-
 helper(['admin_icon']);
 ?><!doctype html>
 <html lang="<?= esc($lang ?? 'en'); ?>">
