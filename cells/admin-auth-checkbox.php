@@ -19,11 +19,17 @@ foreach($attributes as $key => $value)
 $attributes['type'] = 'checkbox';
 $attributes['class'] = $attributes['class'] = 'form-check-input';
 
+if ($error)
+{
+    $attributes['class'] .= ' is-invalid';
+}
+
 ?>
 <div>
     <div class="form-check align-items-center">
         <input <?= stringify_attributes($attributes);?>>
         <label class="form-check-label text-small" 
             for="<?= $attributes['id'] ?? '';?>"><?= $label;?></label>
+        <div class="invalid-feedback"><?= $error;?></div>
     </div>
 </div>
