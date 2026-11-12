@@ -3,10 +3,11 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "BasicApp\\AdminLte4\\" : "src/"
+            "BasicApp\\AdminLte4\\" : "src"
         }
     },
     "require": {
-        "almasaeed2010/adminlte": "^4.8"
+        "almasaeed2010/adminlte": "^4.8",
+        "basic-app/publisher" : "*"
     }
 }
