@@ -24,11 +24,15 @@ foreach($attributes as $key => $value)
     }
 }
 ?>
-<div class="mb-3">
-    <?php
-    /*
-    <label class="form-label"><?= $label;?></label>
-    */?>
-    <input <?= stringify_attributes($attributes);?>/>
-    <div class="invalid-feedback"><?= $error;?></div>
-</div>
+<?php if(!empty($label)):?>
+    <div class="form-floating mb-3">
+        <input <?= stringify_attributes($attributes);?>/>
+        <div class="invalid-feedback"><?= $error;?></div>
+        <label for="<?= $attributes['id'] ?? '';?>"><?= $label ?></label>
+    </div>
+<?php else:?>
+    <div class="mb-3">
+        <input <?= stringify_attributes($attributes);?>/>
+        <div class="invalid-feedback"><?= $error;?></div>
+    </div>
+<?php endif;?>
