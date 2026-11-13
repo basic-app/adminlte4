@@ -22,4 +22,10 @@ class AdminAuthLayout extends Cell
     public $styles;
 
     public $scripts;
+
+    public $error;
+
+    public $errors;
+
+    public $message;
 }

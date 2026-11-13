@@ -61,6 +61,23 @@
                 <?php if($description):?>
                     <p class="login-box-msg"><?= $description;?></p>
                 <?php endif;?>
+                <?php if ($error !== null) : ?>
+                    <div class="alert alert-danger" role="alert"><?= esc($error);?></div>
+                <?php elseif($errors !== null) : ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?php if (is_array($errors)): ?>
+                            <?php foreach($errors as $error): ?>
+                                <?= esc($error);?>
+                                <br>
+                            <?php endforeach ?>
+                        <?php else:?>
+                            <?= esc($error);?>
+                        <?php endif;?>
+                    </div>
+                <?php endif ?>
+                <?php if ($message !== null): ?>
+                    <div class="alert alert-success" role="alert"><?= esc($message);?></div>
+                <?php endif ?>
                 <?= $content;?>
             </div>
         </div>
