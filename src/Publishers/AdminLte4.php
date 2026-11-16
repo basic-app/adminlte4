@@ -1,9 +1,11 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @author Basic App Dev Team
  * @license MIT
  */
+
 namespace BasicApp\AdminLte4\Publishers;
 
 use BasicApp\Publisher\Publisher;
@@ -14,7 +16,7 @@ class AdminLte4 extends Publisher
      * Custom restrictions.
      */
     protected $customRestrictions = '*';
-    
+
     /**
      * Tell Publisher where to create destination directory.
      */

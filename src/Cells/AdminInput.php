@@ -1,16 +1,18 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @author Basic App Dev Team
  * @license MIT
  */
+
 namespace BasicApp\AdminLte4\Cells;
 
 use CodeIgniter\View\Cells\Cell;
 
 class AdminInput extends Cell
 {
-    protected string $view = __DIR__ . '/../../cells/admin-input.php';
+    protected string $view = __DIR__ . '/../../resources/Views/admin-input.php';
 
     public $label;
 

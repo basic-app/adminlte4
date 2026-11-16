@@ -1,9 +1,11 @@
 <?php
+
 declare(strict_types=1);
 /**
  * @author Basic App Dev Team
  * @license MIT
  */
+
 namespace BasicApp\AdminLte4\Cells;
 
 use CodeIgniter\View\Cells\Cell;
@@ -11,7 +13,7 @@ use App\Interfaces\AdminInterface;
 
 class AdminLayout extends Cell
 {
-    protected string $view = __DIR__ . '/../../cells/admin-layout.php';
+    protected string $view = __DIR__ . '/../../resources/Views/admin-layout.php';
 
     public $user;
 
