@@ -14,11 +14,11 @@ class AdminInputImage extends Cell
 {
     protected string $view = __DIR__ . '/../../resources/Views/admin-input-image.php';
 
-    public $label;
+    public ?string $label = null;
 
-    public $error;
+    public ?string $error = null;
 
-    public $url;
+    public ?string $url = null;
 
     public array $attributes = [];
 }

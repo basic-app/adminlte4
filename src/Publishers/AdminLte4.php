@@ -15,12 +15,12 @@ class AdminLte4 extends Publisher
     /**
      * Custom restrictions.
      */
-    protected $customRestrictions = '*';
+    protected ?string $customRestrictions = '*';
 
     /**
      * Tell Publisher where to create destination directory.
      */
-    protected $createDestination = true;
+    protected bool $createDestination = true;
 
     /**
      * Tell Publisher where to get the files.

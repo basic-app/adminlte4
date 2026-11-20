@@ -1,9 +1,17 @@
 <?php
+
 declare(strict_types=1);
+
 /**
  * @author Basic App Dev Team
  * @license MIT
+ * 
+ * @var ?string $label
+ * @var ?string $error
+ * @var array $attributes 
  */
+?>
+<?php
 foreach($attributes as $key => $value)
 {
     if ($value === true)

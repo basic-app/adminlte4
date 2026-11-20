@@ -1,10 +1,35 @@
 <?php
+
 declare(strict_types=1);
+
 /**
  * @author Basic App Dev Team
  * @license MIT
  */
+
+use BasicApp\AdminAuth\Interfaces\AdminInterface;
+
+/** @var AdminInterface $user */
+/** @var ?string $appName */
+/** @var ?string $lang */
+/** @var ?string $title */
+/** @var ?string $h1 */
+/** @var ?string $description */
+/** @var ?string $content */
+/** @var ?string $activeMenu */
+/** @var ?string $copyright */
+/** @var ?string $styles */
+/** @var ?string $scripts */
+/** @var array $breadcrumbs */
+/** @var array $menu */
+/** @var array $actions */
+/** @var array $footerMenu */
+/** @var array $messages */
+?>
+<?php
+
 helper(['admin_icon']);
+
 ?><!doctype html>
 <html lang="<?= esc($lang ?? 'en'); ?>">
   <!--begin::Head-->
@@ -158,10 +183,7 @@ helper(['admin_icon']);
                         role="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        
-
-                        <?php $avatarUrl = $user->getAdminAvatarImageUrl(/*'assets/adminlte4/assets/img/user2-160x160.jpg'*/);?>
-                        
+                        <?php $avatarUrl = $user->getAdminAvatarImageUrl();?>
                         <?php if($avatarUrl):?>
                             <img src="<?= $avatarUrl;?>" 
                                 class="user-image rounded-circle shadow me-2" 

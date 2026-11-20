@@ -1,9 +1,17 @@
 <?php
+
 declare(strict_types=1);
+
 /**
  * @author Basic App Dev Team
  * @license MIT
  */
+
+/** @var ?string $label */
+/** @var ?string $error */
+/** @var ?string $slot */
+/** @var array $attributes */
+
 helper(['admin_editor']);
 
 register_admin_editor();

@@ -1,9 +1,14 @@
 <?php
+
 declare(strict_types=1);
+
 /**
  * @author Basic App Dev Team
  * @license MIT
  */
+
+/** @var ?string $label */
+
 ?>
 <div class="d-grid gap-2 mt-3">
     <button type="submit" class="btn btn-primary"><?= $label;?></button>

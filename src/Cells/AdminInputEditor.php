@@ -14,11 +14,11 @@ class AdminInputEditor extends Cell
 {
     protected string $view = __DIR__ . '/../../resources/Views/admin-input-editor.php';
 
-    public $label;
+    public ?string $label = null;
 
-    public $error;
+    public ?string $error = null;
 
-    public $slot;
+    public ?string $slot = null;
 
     public array $attributes = [];
 }

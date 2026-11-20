@@ -1,9 +1,19 @@
 <?php
+
 declare(strict_types=1);
+
+/** @var ?string $label */
+/** @var ?string $error */
+/** @var ?string $uncheckValue */
+/** @var array $attributes */
+?>
+<?php
+
 /**
  * @author Basic App Dev Team
  * @license MIT
  */
+
 foreach($attributes as $key => $value)
 {
     if ($value === true)
@@ -18,7 +28,7 @@ foreach($attributes as $key => $value)
 }
 
 $attributes['type'] = 'checkbox';
-$attributes['class'] = $attributes['class'] = 'form-check-input';
+$attributes['class'] = 'form-check-input';
 
 if ($error)
 {
@@ -36,7 +46,9 @@ $attributes['id'] = $attributes['id'] ?? $id;
             <input type="hidden" name="<?= $attributes['name'];?>" value="<?= $uncheckValue;?>" />
         <?php endif;?>
         <input <?= stringify_attributes($attributes);?>>
-        <label class="form-check-label text-small" for="<?= $id;?>"><?= $label;?></label>
+        <?php if($label):?>
+            <label class="form-check-label text-small" for="<?= $id;?>"><?= $label;?></label>
+        <?php endif;?>
         <div class="invalid-feedback"><?= $error;?></div>
     </div>
 </div>

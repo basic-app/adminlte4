@@ -1,9 +1,22 @@
 <?php
+
 declare(strict_types=1);
+
 /**
  * @author Basic App Dev Team
  * @license MIT
  */
+
+/** @var ?string $scenario */
+/** @var ?string $type */
+/** @var ?string $icon */
+/** @var ?string $label */
+/** @var ?string $confirmation */
+/** @var ?string $method */
+/** @var ?string $url */
+
+/** @var array $attributes */
+
 $attributes['class'] = $attributes['class'] ?? 'btn btn-sm btn-' . $type .' text-nowrap';
 
 helper(['admin_icon']);

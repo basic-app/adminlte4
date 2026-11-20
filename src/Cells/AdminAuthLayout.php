@@ -14,21 +14,21 @@ class AdminAuthLayout extends Cell
 {
     protected string $view = __DIR__ . '/../../resources/Views/admin-auth-layout.php';
 
-    public $lang;
+    public ?string $lang = null;
 
-    public $title;
+    public ?string $title = null;
 
-    public $description;
+    public ?string $description = null;
 
-    public $content;
+    public ?string $content = null;
 
-    public $styles;
+    public ?string $styles = null;
 
-    public $scripts;
+    public ?string $scripts = null;
 
-    public $error;
+    public ?string $error = null;
 
-    public $errors;
+    public ?string $message = null;
 
-    public $message;
+    public array $errors = [];
 }

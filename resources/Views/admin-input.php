@@ -1,9 +1,16 @@
 <?php
+
 declare(strict_types=1);
+
 /**
  * @author Basic App Dev Team
  * @license MIT
  */
+
+/** @var ?string $label */
+/** @var ?string $error */
+/** @var array $attributes */
+
 $attributes['type'] = $attributes['type'] ?? 'text';
 $attributes['class'] = $attributes['class'] ?? 'form-control';
 

@@ -14,11 +14,11 @@ class AdminInputCheckbox extends Cell
 {
     protected string $view = __DIR__ . '/../../resources/Views/admin-input-checkbox.php';
 
-    public $label;
+    public ?string $label = null;
 
-    public $error;
+    public ?string $error = null;
 
-    public $uncheckValue;
+    public ?string $uncheckValue = null;
 
     public array $attributes = [];
 }

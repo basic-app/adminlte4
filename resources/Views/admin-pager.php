@@ -1,9 +1,16 @@
 <?php
+
 declare(strict_types=1);
+
 /**
  * @author Basic App Dev Team
  * @license MIT
  */
+
+use CodeIgniter\Pager\PagerRenderer;
+
+/** @var PagerRenderer $pager */
+
 ?>
 <div>
     <?php if ($pager->hasPreviousPage()) : ?>

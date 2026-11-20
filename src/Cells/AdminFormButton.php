@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 /**
  * @author Basic App Dev Team
  * @license MIT
@@ -14,7 +15,7 @@ class AdminFormButton extends Cell
 {
     protected string $view = __DIR__ . '/../../resources/Views/admin-form-button.php';
 
-    public $label;
+    public ?string $label = null;
 
     public array $attributes = [];
 }

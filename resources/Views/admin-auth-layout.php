@@ -1,9 +1,22 @@
 <?php
+
 declare(strict_types=1);
+
 /**
  * @author Basic App Dev Team
  * @license MIT
  */
+
+/** @var ?string $lang */
+/** @var ?string $title */
+/** @var ?string $description */
+/** @var ?string $content */
+/** @var ?string $styles */
+/** @var ?string $scripts */
+/** @var ?string $error */
+/** @var ?string $message */
+/** @var array $errors */
+
 ?><!doctype html>
 <html lang="<?= esc($lang ?? 'en'); ?>">
 <!--begin::Head-->
@@ -59,21 +72,22 @@ declare(strict_types=1);
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
-                <?php if($description):?>
+                <?php if($description !== null):?>
                     <p class="login-box-msg"><?= $description;?></p>
                 <?php endif;?>
-                <?php if ($error !== null) : ?>
+                <?php if($error !== null): ?>
                     <div class="alert alert-danger" role="alert"><?= esc($error);?></div>
-                <?php elseif($errors !== null) : ?>
-                    <div class="alert alert-danger" role="alert">
-                        <?php if (is_array($errors)): ?>
-                            <?php foreach($errors as $error): ?>
-                                <?= esc($error);?>
+                <?php endif;?>
+                <?php if(count($errors) > 0) : ?>
+                    <div class="alert alert-danger" role="alert">                    
+                        <?php $i=0;?>
+                        <?php foreach($errors as $error): ?>
+                            <?php if($i > 0):?>
                                 <br>
-                            <?php endforeach ?>
-                        <?php else:?>
+                            <?php endif;?>
                             <?= esc($error);?>
-                        <?php endif;?>
+                            <?php $i++;?>
+                        <?php endforeach ?>
                     </div>
                 <?php endif ?>
                 <?php if ($message !== null): ?>

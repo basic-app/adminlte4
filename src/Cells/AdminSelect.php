@@ -14,11 +14,11 @@ class AdminSelect extends Cell
 {
     protected string $view = __DIR__ . '/../../resources/Views/admin-select.php';
 
-    public $label;
+    public ?string $label = null;
 
-    public $error;
+    public ?string $error = null;
 
-    public $placeholder;
+    public ?string $placeholder = null;
 
     public array $attributes = [];
 

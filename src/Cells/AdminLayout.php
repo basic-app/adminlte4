@@ -9,33 +9,33 @@ declare(strict_types=1);
 namespace BasicApp\AdminLte4\Cells;
 
 use CodeIgniter\View\Cells\Cell;
-use App\Interfaces\AdminInterface;
+use BasicApp\AdminAuth\Interfaces\AdminInterface;
 
 class AdminLayout extends Cell
 {
     protected string $view = __DIR__ . '/../../resources/Views/admin-layout.php';
 
-    public $user;
+    public ?AdminInterface $user = null;
 
-    public $appName;
+    public ?string $appName = null;
 
-    public $lang;
+    public ?string $lang = null;
 
-    public $title;
+    public ?string $title = null;
 
-    public $h1;
+    public ?string $h1 = null;
 
-    public $description;
+    public ?string $description = null;
 
-    public $content;
+    public ?string $content = null;
 
-    public $activeMenu;
+    public ?string $activeMenu = null;
 
-    public $copyright;
+    public ?string $copyright = null;
 
-    public $styles;
+    public ?string $styles = null;
 
-    public $scripts;
+    public ?string $scripts = null;
 
     public array $breadcrumbs = [];
 

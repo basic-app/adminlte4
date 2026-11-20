@@ -14,5 +14,5 @@ class AdminAuthSubmit extends Cell
 {
     protected string $view = __DIR__ . '/../../resources/Views/admin-auth-submit.php';
 
-    public $label;
+    public ?string $label = null;
 }

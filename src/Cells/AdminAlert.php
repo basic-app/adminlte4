@@ -14,7 +14,7 @@ class AdminAlert extends Cell
 {
     protected string $view = __DIR__ . '/../../resources/Views/admin-alert.php';
 
-    public $message;
+    public ?string $message = null;
 
-    public $type;
+    public ?string $type = null;
 }

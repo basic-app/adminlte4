@@ -14,9 +14,9 @@ class AdminAuthCheckbox extends Cell
 {
     protected string $view = __DIR__ . '/../../resources/Views/admin-auth-checkbox.php';
 
-    public $label;
+    public ?string $label = null;
 
-    public $error;
+    public ?string $error = null;
 
     public array $attributes = [];
 }

@@ -1,9 +1,18 @@
 <?php
+
 declare(strict_types=1);
+
 /**
  * @author Basic App Dev Team
  * @license MIT
  */
+
+/** @var ?string $label */
+/** @var ?string $error */
+/** @var ?string $placeholder */
+/** @var array $attributes */
+/** @var array $options */
+
 $attributes['class'] = $attributes['class'] ?? 'form-control';
 
 if (array_key_exists('placeholder', $attributes))

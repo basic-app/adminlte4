@@ -14,17 +14,17 @@ class AdminGridButton extends BaseAdminGridButton
 {
     protected string $view = __DIR__ . '/../../resources/Views/admin-grid-button.php';
 
-    public $label;
+    public ?string $label = null;
 
-    public $type;
+    public ?string $type = null;
 
-    public $method;
+    public ?string $method = null;
 
-    public $confirmation;
+    public ?string $confirmation = null;
 
-    public $url;
+    public ?string $url = null;
 
-    public $icon;
+    public ?string $icon = null;
 
     public array $attributes = [];
 }
