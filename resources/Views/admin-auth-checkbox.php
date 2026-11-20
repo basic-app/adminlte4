@@ -10,6 +10,8 @@ declare(strict_types=1);
  * @var ?string $error
  * @var array $attributes 
  */
+
+helper(['url']);
 ?>
 <?php
 foreach($attributes as $key => $value)
@@ -26,7 +28,8 @@ foreach($attributes as $key => $value)
 }
 
 $attributes['type'] = 'checkbox';
-$attributes['class'] = $attributes['class'] = 'form-check-input';
+$attributes['class'] = $attributes['class'] ?? 'form-check-input';
+$attributes['id'] = $attributes['id'] ?? url_title($attributes['name'], '_', true);
 
 if ($error)
 {
@@ -38,7 +41,7 @@ if ($error)
     <div class="form-check align-items-center">
         <input <?= stringify_attributes($attributes);?>>
         <label class="form-check-label text-small" 
-            for="<?= $attributes['id'] ?? '';?>"><?= $label;?></label>
+            for="<?= $attributes['id'];?>"><?= $label;?></label>
         <div class="invalid-feedback"><?= $error;?></div>
     </div>
 </div>
